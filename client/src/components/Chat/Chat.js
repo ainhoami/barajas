@@ -22,10 +22,9 @@ const Chat = ({ location }) => {
   const [users, setUsers] = useState('');
   const [message, setMessage] = useState('');
   const [messages, setMessages] = useState([]);
-
   useEffect(() => {
     const { name, room } = queryString.parse(location.search);
-console.log(queryString.parse(location.search),'g')
+
     socket = io(ENDPOINT);
 
     setRoom(room);
